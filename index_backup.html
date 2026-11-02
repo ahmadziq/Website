@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<head>
+  <!-- Meta Tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Birthday untuk Ayang">
+  <meta name="author" content="Raziq">
+  <meta name="theme-color" content="#ffe">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Happy Birthday, Sayang!">
+  <meta property="og:description" content="Happy Birthday, Sayang! I love you.">
+  <meta property="og:type" content="website">
+
+  <!-- Title & Resources -->
+  <title>Happy Birthday, Sayang!</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <script src="config.js"></script>
+</head>
+<body>
+  <!-- Background Music -->
+  <audio loop id="bgm" preload="auto" aria-label="Background music">
+    <source src="bgm.mp3" type="audio/mpeg">
+  </audio>
+  
+  <!-- Main Container -->
+  <div id="viewport">
+    <div id="main">
+      <!-- Love Letter Content -->
+      <div id="letter" role="article"></div>
+      
+      <button id="memories-open" class="memories-open" type="button">♡ Our Memories →</button>
+      <section id="memory-gallery" class="memory-gallery" aria-hidden="true">
+        <div class="gallery-inner">
+          <div class="gallery-topline">A LITTLE BOOK OF US</div><h1 class="gallery-title">Our Memories <span>♡</span></h1>
+          <p class="gallery-subtitle">Every little moment with you means the world to me.</p>
+          <div class="memory-card" id="memory-card">
+            <div class="memory-photo-wrap"><img id="memory-photo" class="memory-photo" alt="Our memory"><span class="photo-tape"></span></div>
+            <div class="memory-caption"><div class="memory-count" id="memory-count">01 / 06</div><h2 id="memory-heading"></h2><p id="memory-description"></p></div>
+          </div>
+          <div class="gallery-controls"><button id="memory-prev" class="gallery-arrow" type="button">←</button><div class="gallery-dots" id="gallery-dots"></div><button id="memory-next" class="gallery-arrow gallery-next" type="button">Next →</button></div>
+          <button id="gallery-back" class="gallery-back" type="button">← Back to my letter</button>
+        </div>
+      </section>
+      <section id="memory-finale" class="memory-finale" aria-hidden="true"><div class="finale-hearts">♡　♥　♡　♥　♡</div><p class="finale-kicker">AND THIS IS JUST THE BEGINNING</p><h2>To many more memories, sayang.</h2><p>My favourite memories are the ones I haven't made with you yet. I love you. ♡</p><button id="replay-memories" class="gallery-arrow gallery-next" type="button">See our memories again ↺</button></section>
+      <!-- Time Counter -->
+      <div id="clock-box" role="timer">
+        <div id="clock-text"></div>
+        <div id="clock"></div>
+      </div>
+      
+      <!-- Ground Canvas -->
+      <canvas id="ground-canvas" aria-hidden="true"></canvas>
+
+      <!-- Static Canvas (tree) -->
+      <canvas id="static-canvas" aria-hidden="true"></canvas>
+
+      <!-- Dynamic Canvas (falling hearts) -->
+      <canvas id="canvas" aria-label="Animated tree with hearts"></canvas>
+    </div>
+  </div>
+  
+  <!-- Main Script -->
+  <script src="js/geometry.js"></script>
+  <script src="js/animation.js"></script>
+  <script src="js/tree.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/memories.js"></script>
+</body>
+</html>
