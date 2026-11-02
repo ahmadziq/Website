@@ -35,5 +35,5 @@ const CONFIG = {
     minute: "m",
     second: "s"
   },
-  seedText: "Miss You"
+  seedText: "Birthday! ❤️",
 };
