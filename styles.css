@@ -86,8 +86,8 @@ body {
   position: absolute;
   width: 500px;
   height: 550px;
-  left: 20px;
-  top: 50px;
+  left: 2%;
+  top: 7%;
   display: none;
   font-size: 16px;
   color: var(--text-color);
@@ -280,4 +280,4 @@ body {
 .memory-caption{padding:13px 10px 0}.memory-count{font:11px sans-serif;letter-spacing:2px;color:#c18a9b}.memory-caption h2{margin-top:7px;color:#39765f;font:500 23px Georgia,serif}.memory-caption p{max-width:360px;margin:8px auto 0;color:#7b897e;font:13px/1.55 sans-serif}
 .gallery-controls{display:flex;align-items:center;gap:18px;margin-top:16px}.gallery-arrow{border:1px solid #34775e47;border-radius:999px;background:#ffffffb8;color:#39765f;min-width:42px;min-height:38px;padding:8px 14px;font:14px sans-serif;cursor:pointer;transition:.25s}.gallery-arrow:hover{background:#39765f;color:white;transform:translateY(-2px)}.gallery-dots{display:flex;gap:7px}.gallery-dot{width:6px;height:6px;border:0;border-radius:50%;background:#d9c6cb;padding:0;cursor:pointer}.gallery-dot.is-current{width:19px;border-radius:8px;background:#d58ca4}.gallery-back{margin-top:12px;border:0;background:transparent;color:#91a095;font:12px sans-serif;cursor:pointer}
 .memory-finale{align-items:center;justify-content:center;text-align:center;padding:35px;flex-direction:column}.memory-finale h2{max-width:700px;margin:18px 0 12px;color:#39765f;font:500 42px/1.15 Georgia,serif}.memory-finale p:not(.finale-kicker){max-width:480px;color:#7b897e;font:15px/1.7 sans-serif}.finale-hearts{margin-bottom:22px;color:#d98aa5;font-size:25px;letter-spacing:8px;animation:heartsFloat 3s ease-in-out infinite}@keyframes heartsFloat{50%{transform:translateY(-12px)}}
-@media(max-width:600px){.gallery-inner{padding:18px 12px}.gallery-title{font-size:30px}.memory-card{width:94%;margin-top:13px;padding:10px}.memory-photo-wrap{height:205px}.memory-caption h2{font-size:20px}.memory-caption p{font-size:12px}.gallery-controls{gap:10px;margin-top:12px}.memory-finale h2{font-size:32px}}
+@media(max-width:350px){.gallery-inner{padding:18px 12px}.gallery-title{font-size:30px}.memory-card{width:94%;margin-top:13px;padding:10px}.memory-photo-wrap{height:205px}.memory-caption h2{font-size:20px}.memory-caption p{font-size:12px}.gallery-controls{gap:10px;margin-top:12px}.memory-finale h2{font-size:32px}}
