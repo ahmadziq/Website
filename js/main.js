@@ -12,10 +12,16 @@ function showLoveLetter() {
 }
 
 function startClock(config) {
-  const startMs = new Date(config.memorialDate).getTime();
-  const digits = createClockDOM(config);
-  timeElapse(startMs, digits);
-  setInterval(() => timeElapse(startMs, digits), AnimationConfig.TIME_UPDATE_INTERVAL);
+  const [year, month, day] = config.memorialDate.split("-").map(Number);
+
+  const birthDate = new Date(year, month - 1, day);
+  const clock = createClockDOM(config);
+
+  timeElapse(birthDate, clock);
+
+  setInterval(() => {
+    timeElapse(birthDate, clock);
+  }, 60000);
 }
 
 // ===========================

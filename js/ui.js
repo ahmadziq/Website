@@ -4,56 +4,40 @@
 
 function createClockDOM(config) {
   const clock = document.getElementById("clock");
-  const cfg = config.time;
-  const digits = {};
   clock.textContent = "";
-
-  function addText(text) {
-    clock.appendChild(document.createTextNode(text));
-  }
-
-  function addDigit(key) {
-    const span = document.createElement("span");
-    span.className = "digit";
-    clock.appendChild(span);
-    digits[key] = span;
-    return span;
-  }
-
-  addText(cfg.prefix);
-  addDigit("days");
-  addText(` ${cfg.day} `);
-  addDigit("hours");
-  addText(` ${cfg.hour} `);
-  addDigit("minutes");
-  addText(` ${cfg.minute} `);
-  addDigit("seconds");
-  addText(` ${cfg.second}`);
-
-  return digits;
+  return clock;
 }
 
-function timeElapse(startMs, digits) {
-  const secondsPerMinute = 60;
-  const secondsPerHour = secondsPerMinute * 60;
-  const secondsPerDay = secondsPerHour * 24;
+function timeElapse(birthDate, clock) {
+  const now = new Date();
 
-  function twoDigits(value) {
-    return String(value).padStart(2, "0");
+  let years = now.getFullYear() - birthDate.getFullYear();
+  let months = now.getMonth() - birthDate.getMonth();
+  let days = now.getDate() - birthDate.getDate();
+
+  if (days < 0) {
+    months--;
+    const previousMonth = new Date(
+      now.getFullYear(),
+      now.getMonth(),
+      0
+    );
+    days += previousMonth.getDate();
   }
 
-  const totalSeconds = Math.floor((Date.now() - startMs) / 1000);
-  const todaySeconds = totalSeconds % secondsPerDay;
-  const days = Math.floor(totalSeconds / secondsPerDay);
+  if (months < 0) {
+    years--;
+    months += 12;
+  }
 
-  const hours = Math.floor(todaySeconds / secondsPerHour);
-  const minutes = Math.floor((todaySeconds % secondsPerHour) / secondsPerMinute);
-  const seconds = todaySeconds % secondsPerMinute;
-
-  digits.days.textContent = String(days);
-  digits.hours.textContent = twoDigits(hours);
-  digits.minutes.textContent = twoDigits(minutes);
-  digits.seconds.textContent = twoDigits(seconds);
+  clock.innerHTML = `
+    <span class="digit">${years}</span>
+    <span class="unit"> tahun </span>
+    <span class="digit">${months}</span>
+    <span class="unit"> bulan </span>
+    <span class="digit">${days}</span>
+    <span class="unit"> hari</span>
+  `;
 }
 
 // ===========================

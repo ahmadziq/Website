@@ -5,7 +5,7 @@ const CONFIG = {
     connector: "aka",
     together: "skobobom"
   },
-  memorialDate: "2004-11-09T00:00:00",
+  memorialDate: "2004-11-09",
   letter: {
     paragraph1: [
       "Selamat hari jadi, ayanggg! ❤️ ",
@@ -31,9 +31,8 @@ const CONFIG = {
   time: {
     prefix: "Umur: ",
     day: "d",
-    hour: "h",
-    minute: "m",
-    second: "s"
+    months: "m",
+    years: "y"
   },
   seedText: "Birthday! ❤️",
 };
