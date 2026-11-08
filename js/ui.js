@@ -31,6 +31,7 @@ function timeElapse(birthDate, clock) {
   }
 
   clock.innerHTML = `
+    <span class="unit"> Umur:  </span>
     <span class="digit">${years}</span>
     <span class="unit"> tahun </span>
     <span class="digit">${months}</span>
