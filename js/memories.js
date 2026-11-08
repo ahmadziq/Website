@@ -1,11 +1,13 @@
 // Change the image paths and captions here. Place your photos in /memories.
 const OUR_MEMORIES = [
- {image:"memories/photo-1.jpg",title:"A moment to remember",description:"Every memory with you becomes one of my favourites. ♡"},
- {image:"memories/photo-2.jpg",title:"My favourite person",description:"No matter where we go, being with you makes it special."},
- {image:"memories/photo-3.jpg",title:"Little moments, big feelings",description:"Sometimes the simplest moments become the ones I treasure most."},
- {image:"memories/photo-4.jpg",title:"Your beautiful smile",description:"I hope I get to see that beautiful smile for a very, very long time."},
- {image:"memories/photo-5.jpg",title:"Us, always",description:"Thank you for making ordinary days feel a little more magical."},
- {image:"memories/photo-6.jpg",title:"To many more",description:"Here's to all the places we'll go and memories we'll make together. ❤️"}
+ {image:"memories/photo-1.jpg",title:"Ayang version budak kecik",description:"Kalau saya jumpa ayang versi budak kecik ni, saya nak peluk dia dan cakap 'I love you'."},
+ {image:"memories/photo-2.jpg",title:"Daripada sini",description:"Daripada sini kita jumpa, Ayang kt FTS citer pasal problem yang orang lain tk kesah langsung. Tapi saya bersyukur ayang citer sbb end up kita sama2."},
+ {image:"memories/photo-3.jpg",title:"Ayang sambut birthday saya",description:"Sebelum ni takde orang sambut birthday saya, tapi ayang sambut. Terima kasih ayang. Harini kita sambut ayang punya plak!!!"},
+ {image:"memories/photo-4.jpg",title:"Senyuman ayang",description:"Senyuman ayang buat saya rasa tenang. Ayang selalu buat saya rasa tenang. Terima kasih ayang. Jangan overthinking, okay?"},
+ {image:"memories/photo-5.jpg",title:"Goofy",description:"Ayang punya side goofy yang saya paling suka. Dengan ayang je saya boleh jadi diri sendiri. Terima kasih ayang sebab terima saya seadanya."},
+ {image:"memories/photo-6.jpg",title:"Ayang merajuk",description:"Tengok muka dia merajuk, comel je saya rasa nak peluk dia. Dahlaa merajuk pastu kopek udang plakk tuu. Mwahh mwahh saya sayang ayang."},
+ {image:"memories/photo-7.jpg",title:"Kita bersama",description:"Kita bersama dalam setiap momen and tu yang paling saya hargai. Terima kasih ada dalam hidup saya sayang!."},
+ {image:"memories/photo-8.jpg",title:"Bayangan kita",description:"Ni bayangan kita nanti masa kita dh kahwin. Saya tak sabar nak hidup dengan ayang. Saya nak kita hidup bahagia sampai bila2."}
 ];
 document.addEventListener("DOMContentLoaded",()=>{
  const $=id=>document.getElementById(id), gallery=$("memory-gallery"), finale=$("memory-finale"), card=$("memory-card"), photo=$("memory-photo"), placeholder=$("photo-placeholder"), dots=$("gallery-dots");let current=0,touchX=0;

@@ -325,7 +325,7 @@ body {
 }
 
 .memory-caption{
-  padding:13px 10px 0
+  padding:9px 10px 0
 }
 
 .memory-count{
@@ -341,7 +341,7 @@ body {
 }
 
 .memory-caption p{
-  max-width:360px;
+  max-width:450px;
   margin:8px auto 0;
   color:#7b897e;
   font:13px/1.55 sans-serif
@@ -459,7 +459,23 @@ body {
    PHONE Styles
    =========================== */
 
-@media(max-width:600px){
+@media(max-width:768px){
+  #landscape-button {
+    display: block;
+  }
+
+  .memory-card{
+    width:600px;
+    margin-top:10px;
+    padding:5px
+  }
+  
+  .memory-photo-wrap{
+    height:350px
+  }
+}
+
+@media(min-width: 768px) and (max-height: 500px){
   .gallery-inner{
     padding:18px 12px
   }
@@ -469,13 +485,13 @@ body {
   }
   
   .memory-card{
-    width:600px;
-    margin-top:13px;
-    padding:10px
+    width:550px;
+    margin-top:10px;
+    padding:5px
   }
   
   .memory-photo-wrap{
-    height:400px
+    height:350px
   }
   
   .memory-caption h2{
@@ -493,9 +509,5 @@ body {
   
   .memory-finale h2{
     font-size:32px
-  }
-  
-  #landscape-button {
-    display: block;
   }
 }
